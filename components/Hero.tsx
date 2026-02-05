@@ -40,7 +40,7 @@ const Hero = ({ onBook }: HeroProps) => {
                                 <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center group-hover:border-[#d4c5b0] group-hover:bg-white/5 transition-all relative pulse-ring">
                                     <Play size={16} fill="currentColor" className="ml-1" />
                                 </div>
-                                <span className="uppercase text-xs tracking-widest font-medium">Watch Film</span>
+                                <span className="uppercase text-xs tracking-widest font-medium">Our Story</span>
                             </button>
                             <button
                                 onClick={onBook}
@@ -54,11 +54,11 @@ const Hero = ({ onBook }: HeroProps) => {
             </div>
 
             {showVideo && (
-                <div className="fixed inset-0 z-[100] bg-black flex items-center justify-center animate-in fade-in duration-500">
+                <div className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center animate-in fade-in duration-500 p-8">
                     <button onClick={() => setShowVideo(false)} className="absolute top-8 left-8 text-white hover:text-[#d4c5b0] transition-colors z-50 cursor-pointer">
                         <X size={40} strokeWidth={1} />
                     </button>
-                    <div className="w-full h-full max-w-7xl aspect-video bg-black flex items-center justify-center">
+                    <div className="w-full max-w-4xl aspect-video bg-black flex items-center justify-center shadow-2xl border border-white/10">
                         <iframe
                             className="w-full h-full"
                             src="https://www.youtube.com/embed/TlLmve5I67o?autoplay=1"
