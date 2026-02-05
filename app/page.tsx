@@ -13,9 +13,9 @@ import StickyNav from '@/components/StickyNav';
 import { SERVICES_DATA } from '@/lib/data';
 
 export default function Home() {
-  const [activeCategory, setActiveCategory] = useState(null);
+  const [activeCategory, setActiveCategory] = useState<any>(null);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
-  const [selectedService, setSelectedService] = useState(null);
+  const [selectedService, setSelectedService] = useState<any>(null);
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {

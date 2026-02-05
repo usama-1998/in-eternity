@@ -54,11 +54,15 @@ const Hero = ({ onBook }: HeroProps) => {
             </div>
 
             {showVideo && (
-                <div className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center animate-in fade-in duration-500 p-8">
-                    <button onClick={() => setShowVideo(false)} className="absolute top-8 left-8 text-white hover:text-[#d4c5b0] transition-colors z-50 cursor-pointer">
-                        <X size={40} strokeWidth={1} />
-                    </button>
-                    <div className="w-full max-w-4xl aspect-video bg-black flex items-center justify-center shadow-2xl border border-white/10">
+                <div className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-md flex items-center justify-center animate-in fade-in duration-500 p-8">
+                    <div className="relative w-full max-w-4xl aspect-video bg-black flex items-center justify-center shadow-2xl border border-white/10">
+                        <button
+                            onClick={() => setShowVideo(false)}
+                            className="absolute -top-12 left-0 text-white hover:text-[#d4c5b0] transition-colors z-[60] cursor-pointer flex items-center gap-2 group"
+                        >
+                            <X size={24} strokeWidth={1} />
+                            <span className="text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Close</span>
+                        </button>
                         <iframe
                             className="w-full h-full"
                             src="https://www.youtube.com/embed/TlLmve5I67o?autoplay=1"
