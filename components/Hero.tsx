@@ -8,7 +8,7 @@ const Hero = () => {
 
     return (
         <header className="relative w-full h-screen bg-black overflow-hidden z-20">
-            <div className="absolute inset-0 opacity-60 animate-ken-burns">
+            <div className="absolute inset-0">
                 <video
                     src="/hero-new.mp4"
                     className="w-full h-full object-cover"
