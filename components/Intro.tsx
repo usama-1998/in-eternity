@@ -22,11 +22,7 @@ const Intro = () => {
                     We believe that true aesthetic refinement lies in the balance between science and art. Our approach focuses on enhancing your natural architecture, creating results that are sophisticated, undetectable, and enduring.
                 </p>
 
-                <div className={`w-24 h-[1px] bg-stone-300 mx-auto mb-12 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'}`}></div>
 
-                <p className={`font-serif text-2xl md:text-3xl leading-tight text-stone-800 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                    "We adopt the precision of a surgeon and the eye of a sculptor."
-                </p>
                 <div className={`mt-16 flex justify-center items-center gap-8 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
                     <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=2070&auto=format&fit=crop" alt="Dr Sin Yong" className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover grayscale shadow-xl" />
                     <div className="text-left">
