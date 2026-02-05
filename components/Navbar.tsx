@@ -16,7 +16,7 @@ const Navbar = () => {
     return (
         <>
             <nav
-                className={`fixed w-full z-50 top-0 left-0 transition-all duration-500 px-6 md:px-12 py-6 flex justify-between items-center ${scrolled ? 'bg-white/10 backdrop-blur-md text-stone-900 mix-blend-difference' : 'bg-transparent text-white mix-blend-difference'
+                className={`fixed w-full z-50 top-0 left-0 transition-all duration-500 px-6 md:px-12 py-6 flex justify-between items-center text-white ${scrolled ? 'bg-black/10 backdrop-blur-md' : 'bg-transparent'
                     }`}
             >
                 <div className="font-serif text-2xl tracking-widest font-semibold uppercase">
