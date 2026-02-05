@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="relative z-10 bg-white">
+      <div className="content-pusher shadow-2xl shadow-black/50 bg-white">
         <Hero onBook={() => setIsBookingOpen(true)} />
         <Intro />
 
@@ -45,9 +45,9 @@ export default function Home() {
             onSelectService={setSelectedService}
           />
         ))}
-
-        <FooterReveal />
       </div>
+
+      <FooterReveal />
 
       <StickyNav />
       {/* <BookingCalendar /> - Temporarily hidden as requested */}
