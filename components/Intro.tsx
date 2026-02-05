@@ -16,7 +16,7 @@ const Intro = () => {
                     The Philosophy
                 </p>
                 <p className={`font-serif text-4xl md:text-6xl leading-tight text-stone-800 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                    "We move away from the 'Magician' persona. We adopt the precision of a surgeon and the eye of a sculptor."
+                    "We adopt the precision of a surgeon and the eye of a sculptor."
                 </p>
                 <div className={`mt-16 flex justify-center items-center gap-8 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
                     <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=2070&auto=format&fit=crop" alt="Dr Sin Yong" className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover grayscale shadow-xl" />
