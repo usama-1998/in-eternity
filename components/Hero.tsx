@@ -38,9 +38,14 @@ const Hero = () => {
                                 </div>
                                 <span className="uppercase text-xs tracking-widest font-medium">Watch Film</span>
                             </button>
-                            <button className="bg-white text-stone-900 px-8 py-4 uppercase text-xs tracking-widest hover:bg-[#d4c5b0] hover:text-white transition-colors">
+                            <a
+                                href="https://716768.typeform.com/to/tVjkhN"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-white text-stone-900 px-8 py-4 uppercase text-xs tracking-widest hover:bg-[#d4c5b0] hover:text-white transition-colors"
+                            >
                                 Book Consultation
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>

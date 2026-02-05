@@ -36,6 +36,7 @@ export default function Home() {
           <CinematicStackingSection
             key={index}
             data={data}
+            index={index}
             onOpenDrawer={setActiveCategory as any}
           />
         ))}

@@ -54,9 +54,14 @@ const DetailDrawer = ({ isOpen, onClose, category }: DetailDrawerProps) => {
                 </div>
 
                 <div className="p-8 border-t border-stone-100 bg-stone-50">
-                    <button className="w-full py-4 bg-stone-900 text-white uppercase tracking-widest text-xs hover:bg-[#d4c5b0] transition-colors">
+                    <a
+                        href="https://716768.typeform.com/to/tVjkhN"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full py-4 bg-stone-900 text-white uppercase tracking-widest text-xs hover:bg-[#d4c5b0] transition-colors block text-center"
+                    >
                         Book Consultation
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
