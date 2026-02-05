@@ -28,7 +28,7 @@ const Hero = ({ onBook }: HeroProps) => {
                         className="text-white font-serif text-6xl md:text-8xl italic animate-text-slide opacity-0 leading-[0.9] mb-6"
                         style={{ animationDelay: '0.2s' }}
                     >
-                        Timeless <br /> Beauty
+                        Beauty <br /> Redefined
                     </h1>
                     <p
                         className="text-white/80 text-lg md:text-xl font-light max-w-lg mb-10 animate-text-slide opacity-0 leading-relaxed"

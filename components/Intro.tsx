@@ -16,10 +16,10 @@ const Intro = () => {
                     The Philosophy
                 </p>
                 <h2 className={`font-serif text-5xl md:text-7xl text-stone-900 mb-6 transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                    Timeless Beauty, <br /><span className="italic">Redefined.</span>
+                    The Art of <br /><span className="italic">Refinement.</span>
                 </h2>
                 <p className={`text-stone-600 max-w-2xl mx-auto leading-relaxed mb-12 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                    We believe that true aesthetic refinement lies in the balance between science and art. Our approach focuses on enhancing your natural architecture, creating results that are sophisticated, undetectable, and enduring.
+                    True elegance is found in the details. We combine medical expertise with an artistic eye to enhance your natural features, creating results that are sophisticated and undetectable.
                 </p>
 
 
