@@ -5,10 +5,11 @@ import { X, ArrowRight } from 'lucide-react';
 interface DetailDrawerProps {
     isOpen: boolean;
     onClose: () => void;
-    category: any; // Using any for flexibility as per original code, or could reuse interfaces
+    category: any;
+    onBook?: () => void;
 }
 
-const DetailDrawer = ({ isOpen, onClose, category }: DetailDrawerProps) => {
+const DetailDrawer = ({ isOpen, onClose, category, onBook }: DetailDrawerProps) => {
     if (!isOpen || !category) return null;
 
     return (
@@ -54,14 +55,12 @@ const DetailDrawer = ({ isOpen, onClose, category }: DetailDrawerProps) => {
                 </div>
 
                 <div className="p-8 border-t border-stone-100 bg-stone-50">
-                    <a
-                        href="https://716768.typeform.com/to/tVjkhN"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <button
+                        onClick={onBook}
                         className="w-full py-4 bg-stone-900 text-white uppercase tracking-widest text-xs hover:bg-[#d4c5b0] transition-colors block text-center"
                     >
                         Book Consultation
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>

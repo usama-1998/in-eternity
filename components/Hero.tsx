@@ -3,12 +3,16 @@
 import { useState } from 'react';
 import { Play, X } from 'lucide-react';
 
-const Hero = () => {
+interface HeroProps {
+    onBook?: () => void;
+}
+
+const Hero = ({ onBook }: HeroProps) => {
     const [showVideo, setShowVideo] = useState(false);
 
     return (
         <header className="relative w-full h-screen bg-black overflow-hidden z-20">
-            <div className="absolute inset-0 opacity-60">
+            <div className="absolute inset-0 opacity-70">
                 <video
                     src="/hero-new.mp4"
                     className="w-full h-full object-cover"
@@ -38,14 +42,12 @@ const Hero = () => {
                                 </div>
                                 <span className="uppercase text-xs tracking-widest font-medium">Watch Film</span>
                             </button>
-                            <a
-                                href="https://716768.typeform.com/to/tVjkhN"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <button
+                                onClick={onBook}
                                 className="bg-white text-stone-900 px-8 py-4 uppercase text-xs tracking-widest hover:bg-[#d4c5b0] hover:text-white transition-colors"
                             >
                                 Book Consultation
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>

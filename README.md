@@ -11,7 +11,7 @@ A premium aesthetic medicine website featuring a cinematic, "light & elegant" de
     -   **Skin**: Modest, radiant portrait focusing on texture.
     -   **Body/Lab**: Abstract and elegant imagery matching the "modest luxury" aesthetic.
 -   **Video Support**: The "Face" section now supports cinematic video portraits.
--   **Functional Booking**: "Book Consultation" buttons now link directly to the consultation form.
+-   **Interactive Booking**: "Book Consultation" now opens a seamless embedded Typeform modal for a premium user experience.
 
 ## Tech Stack
 
