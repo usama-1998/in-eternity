@@ -34,7 +34,7 @@ export default function Home() {
       <Navbar />
       <div className="content-pusher shadow-2xl shadow-black/50 bg-white">
         <Hero onBook={() => setIsBookingOpen(true)} />
-        <Intro />
+        <Intro onBook={() => setIsBookingOpen(true)} />
 
         {SERVICES_DATA.map((service, index) => (
           <CinematicStackingSection
