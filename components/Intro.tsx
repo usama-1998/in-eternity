@@ -79,13 +79,12 @@ const Intro = () => {
                         {isHeadlineDone && <span className="ml-1 w-[2px] h-[0.8em] bg-stone-900 animate-pulse"></span>}
                     </span>
                 </h2>
-                <p className={`text-stone-600 max-w-2xl mx-auto leading-relaxed mb-12 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <p className={`text-stone-600 max-w-2xl mx-auto leading-relaxed mb-4 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                     True elegance is found in the details. We combine medical expertise with an artistic eye to enhance your natural features, creating results that are sophisticated and undetectable.
                 </p>
 
-
-                <div className={`mt-8 flex justify-center items-center gap-6 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-                    <img src="/images/dr-sin-yong.jpg" alt="Dr Sin Yong" className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover grayscale shadow-xl" />
+                <div className={`mt-4 flex justify-center items-center gap-6 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+                    <img src="/images/dr-sin-yong.jpg" alt="Dr Sin Yong" className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-xl" />
                     <div className="text-left">
                         <p className="font-serif text-3xl italic text-stone-900">Dr. Sin Yong</p>
                         <p className="text-xs uppercase tracking-wider text-stone-500 mt-2">Medical Director • MRCS (Edin)</p>

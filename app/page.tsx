@@ -43,6 +43,7 @@ export default function Home() {
             index={index}
             onOpenDrawer={setActiveCategory}
             onSelectService={setSelectedService}
+            onBook={() => setIsBookingOpen(true)}
           />
         ))}
       </div>
