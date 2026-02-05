@@ -8,10 +8,10 @@ const Hero = () => {
 
     return (
         <header className="relative w-full h-screen bg-black overflow-hidden z-20">
-            <div className="absolute inset-0">
+            <div className="absolute inset-0 opacity-60">
                 <video
                     src="/hero-new.mp4"
-                    className="w-full h-full object-cover scale-[0.9]"
+                    className="w-full h-full object-cover"
                     autoPlay
                     muted
                     playsInline
