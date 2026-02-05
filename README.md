@@ -2,8 +2,9 @@
 
 A premium aesthetic medicine website featuring a cinematic, "light & elegant" design theme.
 
-## Recent Updates (Light & Elegant Theme)
+## Recent Updates
 
+-   **Book Consultation Buttons**: Added "Book Consultation" buttons to all sections (Hero, Intro, Face, Skin, Body, Lab, and Footer) for seamless booking access throughout the page.
 -   **Cinematic Service Sections**: Completely redesigned the "Face", "Skin", "Body", and "Lab" sections with a high-end editorial look.
 -   **Arched Window Design**: Images are now framed in tall, elegant arches (`rounded-t-[500px]`) with subtle parallax effects.
 -   **New Imagery**:
@@ -12,6 +13,7 @@ A premium aesthetic medicine website featuring a cinematic, "light & elegant" de
     -   **Body/Lab**: Abstract and elegant imagery matching the "modest luxury" aesthetic.
 -   **Video Support**: The "Face" section now supports cinematic video portraits.
 -   **Interactive Booking**: "Book Consultation" now opens a seamless embedded Typeform modal for a premium user experience.
+-   **Hydration Fix**: Suppressed hydration warnings caused by browser extensions.
 
 ## Tech Stack
 

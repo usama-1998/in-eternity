@@ -1,4 +1,8 @@
-const FooterReveal = () => {
+interface FooterRevealProps {
+    onBook?: () => void;
+}
+
+const FooterReveal = ({ onBook }: FooterRevealProps) => {
     return (
         <>
             <div className="h-[80vh] w-full pointer-events-none bg-transparent"></div>
@@ -9,7 +13,15 @@ const FooterReveal = () => {
 
                     <div className="relative z-10 container mx-auto px-6 md:px-20 h-full flex flex-col justify-center">
                         <div className="flex flex-col md:flex-row justify-between items-start mb-20">
-                            <h2 className="font-serif text-6xl md:text-9xl mb-8 md:mb-0">Find<br />Eternity.</h2>
+                            <div>
+                                <h2 className="font-serif text-6xl md:text-9xl mb-8">Find<br />Eternity.</h2>
+                                <button
+                                    onClick={onBook}
+                                    className="bg-white text-stone-900 px-8 py-4 uppercase text-xs tracking-widest hover:bg-[#d4c5b0] hover:text-white transition-colors cursor-pointer"
+                                >
+                                    Book Consultation
+                                </button>
+                            </div>
                             <div className="text-right">
                                 <p className="text-xl font-serif italic mb-4">Pacific Plaza</p>
                                 <p className="text-white/50 leading-loose text-sm">

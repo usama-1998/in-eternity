@@ -23,10 +23,11 @@ interface CinematicStackingSectionProps {
     data: ServiceData;
     onOpenDrawer: (data: ServiceData) => void;
     onSelectService?: (item: ServiceItem) => void;
+    onBook?: () => void;
     index?: number;
 }
 
-const CinematicStackingSection = ({ data, onOpenDrawer, onSelectService, index = 0 }: CinematicStackingSectionProps) => {
+const CinematicStackingSection = ({ data, onOpenDrawer, onSelectService, onBook, index = 0 }: CinematicStackingSectionProps) => {
     const [ref, isVisible] = useIntersection(0.2);
     const [hoveredItem, setHoveredItem] = useState<number | null>(null);
     const isEven = index % 2 === 0;
@@ -115,13 +116,21 @@ const CinematicStackingSection = ({ data, onOpenDrawer, onSelectService, index =
                             ))}
                         </div>
 
-                        <button
-                            onClick={() => onOpenDrawer(data)}
-                            className="w-fit flex items-center gap-4 text-neutral-900 uppercase tracking-[0.2em] text-xs font-bold group hover:text-neutral-600 transition-colors cursor-pointer"
-                        >
-                            <span className="border-b border-neutral-900 pb-1 group-hover:border-neutral-600 transition-colors">View All Services</span>
-                            <ArrowRight className="group-hover:translate-x-2 transition-transform duration-300" size={14} />
-                        </button>
+                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
+                            <button
+                                onClick={() => onOpenDrawer(data)}
+                                className="w-fit flex items-center gap-4 text-neutral-900 uppercase tracking-[0.2em] text-xs font-bold group hover:text-neutral-600 transition-colors cursor-pointer"
+                            >
+                                <span className="border-b border-neutral-900 pb-1 group-hover:border-neutral-600 transition-colors">View All Services</span>
+                                <ArrowRight className="group-hover:translate-x-2 transition-transform duration-300" size={14} />
+                            </button>
+                            <button
+                                onClick={onBook}
+                                className="bg-neutral-900 text-white px-6 py-3 uppercase text-xs tracking-widest hover:bg-[#d4c5b0] transition-colors cursor-pointer"
+                            >
+                                Book Consultation
+                            </button>
+                        </div>
                     </div>
 
                 </div>

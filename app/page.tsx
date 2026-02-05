@@ -48,7 +48,7 @@ export default function Home() {
         ))}
       </div>
 
-      <FooterReveal />
+      <FooterReveal onBook={() => setIsBookingOpen(true)} />
 
       <StickyNav />
       {/* <BookingCalendar /> - Temporarily hidden as requested */}

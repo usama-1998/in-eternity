@@ -3,7 +3,11 @@
 import { useState, useEffect } from 'react';
 import { useIntersection } from '@/lib/hooks';
 
-const Intro = () => {
+interface IntroProps {
+    onBook?: () => void;
+}
+
+const Intro = ({ onBook }: IntroProps) => {
     const [ref, isVisible] = useIntersection();
 
     // Typing Effect State
@@ -83,12 +87,20 @@ const Intro = () => {
                     True elegance is found in the details. We combine medical expertise with an artistic eye to enhance your natural features, creating results that are sophisticated and undetectable.
                 </p>
 
-                <div className={`mt-4 flex justify-center items-center gap-6 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-                    <img src="/images/dr-sin-yong.jpg" alt="Dr Sin Yong" className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-xl" />
-                    <div className="text-left">
-                        <p className="font-serif text-3xl italic text-stone-900">Dr. Sin Yong</p>
-                        <p className="text-xs uppercase tracking-wider text-stone-500 mt-2">Medical Director • MRCS (Edin)</p>
+                <div className={`mt-4 flex flex-col items-center gap-6 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+                    <div className="flex justify-center items-center gap-6">
+                        <img src="/images/dr-sin-yong.jpg" alt="Dr Sin Yong" className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-xl" />
+                        <div className="text-left">
+                            <p className="font-serif text-3xl italic text-stone-900">Dr. Sin Yong</p>
+                            <p className="text-xs uppercase tracking-wider text-stone-500 mt-2">Medical Director • MRCS (Edin)</p>
+                        </div>
                     </div>
+                    <button
+                        onClick={onBook}
+                        className="bg-stone-900 text-white px-8 py-4 uppercase text-xs tracking-widest hover:bg-[#d4c5b0] transition-colors cursor-pointer"
+                    >
+                        Book Consultation
+                    </button>
                 </div>
             </div>
         </section>
