@@ -2,6 +2,7 @@
 
 import { X } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
+import { Widget } from '@typeform/embed-react';
 
 interface BookingModalProps {
     isOpen: boolean;
@@ -46,16 +47,7 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
 
                 {/* Content - Embedding Typeform or providing contact options */}
                 <div className="h-[60vh] bg-white relative">
-                    <iframe
-                        id="typeform-full"
-                        width="100%"
-                        height="100%"
-                        frameBorder="0"
-                        allow="camera; microphone; autoplay; encrypted-media;"
-                        src="https://716768.typeform.com/to/tVjkhN"
-                        title="Booking Form"
-                    ></iframe>
-                    <script type="text/javascript" src="https://embed.typeform.com/embed.js"></script>
+                    <Widget id="tVjkhN" style={{ width: '100%', height: '100%' }} className="w-full h-full" />
                 </div>
 
             </div>
