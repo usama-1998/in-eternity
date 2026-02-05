@@ -9,10 +9,12 @@ const Hero = () => {
     return (
         <header className="relative w-full h-screen bg-black overflow-hidden z-20">
             <div className="absolute inset-0 opacity-60 animate-ken-burns">
-                <img
-                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2864&auto=format&fit=crop"
+                <video
+                    src="/hero-new.mp4"
                     className="w-full h-full object-cover"
-                    alt="Cinematic Background"
+                    autoPlay
+                    muted
+                    playsInline
                 />
             </div>
 

@@ -6,7 +6,7 @@ A premium, cinematic web experience for IN Eternity Clinic, built with Next.js, 
 
 ## Features
 
-- **Cinematic Entrance**: Video background hero section with reveal animations.
+- **Cinematic Entrance**: High-quality video hero section with auto-stop playback for cinematic impact.
 - **Scroll-Linked Animations**: Elements reveal and move based on viewport position.
 - **Parallax Stacking**: "The Face," "The Skin," etc., stack cinematically on scroll.
 - **Interactive Drawers**: Detailed service information slides in from the side.
