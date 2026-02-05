@@ -7,9 +7,10 @@ interface DetailDrawerProps {
     onClose: () => void;
     category: any;
     onBook?: () => void;
+    onSelectService?: (item: any) => void;
 }
 
-const DetailDrawer = ({ isOpen, onClose, category, onBook }: DetailDrawerProps) => {
+const DetailDrawer = ({ isOpen, onClose, category, onBook, onSelectService }: DetailDrawerProps) => {
     if (!isOpen || !category) return null;
 
     return (
@@ -25,7 +26,7 @@ const DetailDrawer = ({ isOpen, onClose, category, onBook }: DetailDrawerProps) 
                         <span className="text-xs uppercase tracking-[0.3em] text-[#d4c5b0] mb-2 block">{category.subtitle}</span>
                         <h2 className="font-serif text-3xl md:text-4xl text-stone-900 italic">{category.title}</h2>
                     </div>
-                    <button onClick={onClose} className="p-2 hover:bg-stone-100 rounded-full transition-colors">
+                    <button onClick={onClose} className="p-2 hover:bg-stone-100 rounded-full transition-colors cursor-pointer">
                         <X size={24} className="text-stone-900" />
                     </button>
                 </div>
@@ -33,7 +34,11 @@ const DetailDrawer = ({ isOpen, onClose, category, onBook }: DetailDrawerProps) 
                 <div className="flex-1 overflow-y-auto p-8 md:p-12">
                     <div className="space-y-12">
                         {category.items.map((item: any, idx: number) => (
-                            <div key={idx} className="group cursor-default">
+                            <div
+                                key={idx}
+                                className="group cursor-pointer hover:bg-stone-50 transition-colors p-4 -m-4 rounded-lg"
+                                onClick={() => onSelectService && onSelectService(item)}
+                            >
                                 <div className="flex justify-between items-start mb-3">
                                     <div className="flex items-baseline gap-4">
                                         <span className="text-xs font-mono text-stone-300">0{idx + 1}</span>
@@ -45,7 +50,7 @@ const DetailDrawer = ({ isOpen, onClose, category, onBook }: DetailDrawerProps) 
                                     {item.description}
                                 </p>
                                 <div className="mt-6 pl-8">
-                                    <button className="text-[10px] uppercase tracking-widest border-b border-stone-200 pb-1 hover:border-stone-900 transition-colors flex items-center gap-2">
+                                    <button className="text-[10px] uppercase tracking-widest border-b border-stone-200 pb-1 hover:border-stone-900 transition-colors flex items-center gap-2 cursor-pointer">
                                         Details <ArrowRight size={12} />
                                     </button>
                                 </div>
@@ -57,7 +62,7 @@ const DetailDrawer = ({ isOpen, onClose, category, onBook }: DetailDrawerProps) 
                 <div className="p-8 border-t border-stone-100 bg-stone-50">
                     <button
                         onClick={onBook}
-                        className="w-full py-4 bg-stone-900 text-white uppercase tracking-widest text-xs hover:bg-[#d4c5b0] transition-colors block text-center"
+                        className="w-full py-4 bg-stone-900 text-white uppercase tracking-widest text-xs hover:bg-[#d4c5b0] transition-colors block text-center cursor-pointer"
                     >
                         Book Consultation
                     </button>

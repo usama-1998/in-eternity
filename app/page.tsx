@@ -57,6 +57,7 @@ export default function Home() {
         isOpen={!!activeCategory}
         onClose={() => setActiveCategory(null)}
         category={activeCategory}
+        onSelectService={setSelectedService}
         onBook={() => {
           setActiveCategory(null);
           setIsBookingOpen(true);

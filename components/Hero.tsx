@@ -36,7 +36,7 @@ const Hero = ({ onBook }: HeroProps) => {
                             <p className="uppercase text-xs tracking-[0.4em]">Medical Aesthetics</p>
                         </div>
                         <div className="flex items-center gap-6">
-                            <button onClick={() => setShowVideo(true)} className="group flex items-center gap-3 text-white hover:text-[#d4c5b0] transition-colors relative">
+                            <button onClick={() => setShowVideo(true)} className="group flex items-center gap-3 text-white hover:text-[#d4c5b0] transition-colors relative cursor-pointer">
                                 <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center group-hover:border-[#d4c5b0] group-hover:bg-white/5 transition-all relative pulse-ring">
                                     <Play size={16} fill="currentColor" className="ml-1" />
                                 </div>
