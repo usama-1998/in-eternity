@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Play, X } from 'lucide-react';
 
 interface HeroProps {
@@ -9,6 +9,38 @@ interface HeroProps {
 
 const Hero = ({ onBook }: HeroProps) => {
     const [showVideo, setShowVideo] = useState(false);
+
+    // Typing Effect State
+    const [currentText, setCurrentText] = useState("");
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [loopNum, setLoopNum] = useState(0);
+    const [typingSpeed, setTypingSpeed] = useState(150);
+
+    const words = ["Redefined", "Elevated", "Reimagined", "Timeless"];
+
+    useEffect(() => {
+        const handleTyping = () => {
+            const i = loopNum % words.length;
+            const fullText = words[i];
+
+            setCurrentText(isDeleting
+                ? fullText.substring(0, currentText.length - 1)
+                : fullText.substring(0, currentText.length + 1)
+            );
+
+            setTypingSpeed(isDeleting ? 50 : 150);
+
+            if (!isDeleting && currentText === fullText) {
+                setTimeout(() => setIsDeleting(true), 2000);
+            } else if (isDeleting && currentText === "") {
+                setIsDeleting(false);
+                setLoopNum(loopNum + 1);
+            }
+        };
+
+        const timer = setTimeout(handleTyping, typingSpeed);
+        return () => clearTimeout(timer);
+    }, [currentText, isDeleting, loopNum, typingSpeed]);
 
     return (
         <header className="relative w-full h-screen bg-black overflow-hidden z-20">
@@ -28,7 +60,11 @@ const Hero = ({ onBook }: HeroProps) => {
                         className="text-white font-serif text-6xl md:text-8xl italic animate-text-slide opacity-0 leading-[0.9] mb-6"
                         style={{ animationDelay: '0.2s' }}
                     >
-                        Beauty <br /> Redefined
+                        Beauty <br />
+                        <span className="inline-flex items-center">
+                            {currentText}
+                            <span className="ml-1 w-[2px] h-[0.8em] bg-white animate-pulse"></span>
+                        </span>
                     </h1>
                     <p
                         className="text-white/80 text-lg md:text-xl font-light max-w-lg mb-10 animate-text-slide opacity-0 leading-relaxed"
