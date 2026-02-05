@@ -55,7 +55,7 @@ const Hero = ({ onBook }: HeroProps) => {
 
             {showVideo && (
                 <div className="fixed inset-0 z-[100] bg-black flex items-center justify-center animate-in fade-in duration-500">
-                    <button onClick={() => setShowVideo(false)} className="absolute top-8 right-8 text-white hover:text-[#d4c5b0] transition-colors z-50">
+                    <button onClick={() => setShowVideo(false)} className="absolute top-8 left-8 text-white hover:text-[#d4c5b0] transition-colors z-50 cursor-pointer">
                         <X size={40} strokeWidth={1} />
                     </button>
                     <div className="w-full h-full max-w-7xl aspect-video bg-black flex items-center justify-center">
