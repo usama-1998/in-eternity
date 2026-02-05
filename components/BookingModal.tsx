@@ -62,7 +62,7 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
                     </div>
                     <button
                         onClick={onClose}
-                        className="p-2 -mr-2 hover:bg-stone-100 rounded-full transition-colors group"
+                        className="p-2 -mr-2 hover:bg-stone-100 rounded-full transition-colors group cursor-pointer"
                     >
                         <X size={20} className="text-stone-400 group-hover:text-stone-900 transition-colors" />
                     </button>
@@ -81,7 +81,7 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
                             </p>
                             <button
                                 onClick={onClose}
-                                className="mt-8 text-[10px] uppercase tracking-widest border-b border-stone-300 pb-1 hover:border-stone-900 transition-colors"
+                                className="mt-8 text-[10px] uppercase tracking-widest border-b border-stone-300 pb-1 hover:border-stone-900 transition-colors cursor-pointer"
                             >
                                 Close Window
                             </button>
@@ -97,7 +97,7 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
                                         placeholder="Full Name"
                                         value={formData.name}
                                         onChange={handleInputChange}
-                                        className="w-full bg-transparent border-b border-stone-200 py-3 text-stone-900 placeholder:text-stone-400/50 focus:border-stone-800 focus:outline-none transition-colors font-serif text-lg"
+                                        className="w-full bg-transparent border-b border-stone-200 py-3 text-stone-900 placeholder:text-stone-400 focus:border-stone-800 focus:outline-none transition-colors font-serif text-lg"
                                     />
                                 </div>
                                 <div className="grid grid-cols-2 gap-6">
@@ -109,7 +109,7 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
                                             placeholder="Email Address"
                                             value={formData.email}
                                             onChange={handleInputChange}
-                                            className="w-full bg-transparent border-b border-stone-200 py-3 text-stone-800 placeholder:text-stone-400/50 focus:border-stone-800 focus:outline-none transition-colors text-sm"
+                                            className="w-full bg-transparent border-b border-stone-200 py-3 text-stone-800 placeholder:text-stone-400 focus:border-stone-800 focus:outline-none transition-colors text-sm"
                                         />
                                     </div>
                                     <div className="group">
@@ -120,7 +120,7 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
                                             placeholder="Phone Number"
                                             value={formData.phone}
                                             onChange={handleInputChange}
-                                            className="w-full bg-transparent border-b border-stone-200 py-3 text-stone-800 placeholder:text-stone-400/50 focus:border-stone-800 focus:outline-none transition-colors text-sm"
+                                            className="w-full bg-transparent border-b border-stone-200 py-3 text-stone-800 placeholder:text-stone-400 focus:border-stone-800 focus:outline-none transition-colors text-sm"
                                         />
                                     </div>
                                 </div>
@@ -131,7 +131,7 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
                                         placeholder="Primary Concern (Optional)"
                                         value={formData.concern}
                                         onChange={handleInputChange}
-                                        className="w-full bg-transparent border-b border-stone-200 py-3 text-stone-800 placeholder:text-stone-400/50 focus:border-stone-800 focus:outline-none transition-colors text-sm resize-none"
+                                        className="w-full bg-transparent border-b border-stone-200 py-3 text-stone-800 placeholder:text-stone-400 focus:border-stone-800 focus:outline-none transition-colors text-sm resize-none"
                                     ></textarea>
                                 </div>
                             </div>
@@ -140,7 +140,7 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
                                 <button
                                     type="submit"
                                     disabled={formState === 'submitting'}
-                                    className="w-full bg-stone-900 text-white py-4 px-6 uppercase tracking-widest text-[10px] hover:bg-[#d4c5b0] hover:text-white transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                                    className="w-full bg-stone-900 text-white py-4 px-6 uppercase tracking-widest text-[10px] hover:bg-[#d4c5b0] hover:text-white transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 cursor-pointer"
                                 >
                                     {formState === 'submitting' ? 'Processing...' : (
                                         <>
