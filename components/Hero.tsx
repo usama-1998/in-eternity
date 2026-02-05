@@ -60,10 +60,14 @@ const Hero = ({ onBook }: HeroProps) => {
                         className="text-white font-serif text-6xl md:text-8xl italic animate-text-slide opacity-0 leading-[0.9] mb-6"
                         style={{ animationDelay: '0.2s' }}
                     >
-                        Beauty
-                        <span className="flex items-center mt-4">
+                        <span className="inline-flex items-center">
+                            {headlineText}
+                            {!isHeadlineDone && <span className="ml-1 w-[2px] h-[0.8em] bg-white animate-pulse"></span>}
+                        </span>
+                        <br />
+                        <span className="flex items-center mt-4 min-h-[1em]">
                             {currentText}
-                            <span className="ml-1 w-[2px] h-[0.8em] bg-white animate-pulse"></span>
+                            {isHeadlineDone && <span className="ml-1 w-[2px] h-[0.8em] bg-white animate-pulse"></span>}
                         </span>
                     </h1>
                     <p
