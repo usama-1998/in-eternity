@@ -1,26 +1,46 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 249, 249, 249;
+  --background-end-rgb: 249, 249, 249;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: #f9f9f9;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar - Hidden for immersion */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Custom Pulse Ring Pseudo-element */
+.pulse-ring::before {
+  content: '';
+  position: absolute;
+  left: -50%; top: -50%; right: -50%; bottom: -50%;
+  border: 1px solid white;
+  border-radius: 50%;
+  animation: pulseRing 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+/* Footer Reveal Utilities */
+.footer-reveal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.content-pusher {
+  position: relative;
+  z-index: 10;
+  background: #f9f9f9;
+  margin-bottom: 90vh; /* Matches footer height */
 }
