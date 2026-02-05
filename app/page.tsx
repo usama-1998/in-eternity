@@ -1,3 +1,6 @@
+"use client";
+
+import React, { useState, useEffect } from 'react';
 import BookingModal from '@/components/BookingModal';
 import CinematicStackingSection from '@/components/CinematicStackingSection';
 import DetailDrawer from '@/components/DetailDrawer';
