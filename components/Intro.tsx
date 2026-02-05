@@ -1,9 +1,62 @@
 "use client";
 
+import { useState, useEffect } from 'react';
 import { useIntersection } from '@/lib/hooks';
 
 const Intro = () => {
     const [ref, isVisible] = useIntersection();
+
+    // Typing Effect State
+    const [headlineText, setHeadlineText] = useState("");
+    const [isHeadlineDone, setIsHeadlineDone] = useState(false);
+    const [subText, setSubText] = useState("");
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [loopNum, setLoopNum] = useState(0);
+    const [typingSpeed, setTypingSpeed] = useState(150);
+
+    const words = ["Refinement.", "Elegance.", "Precision."];
+
+    useEffect(() => {
+        if (!isVisible) return;
+
+        // Stage 1: Type 'The Art of'
+        if (!isHeadlineDone) {
+            const target = "The Art of";
+            if (headlineText.length < target.length) {
+                const timeout = setTimeout(() => {
+                    setHeadlineText(target.substring(0, headlineText.length + 1));
+                }, 150);
+                return () => clearTimeout(timeout);
+            } else {
+                const timeout = setTimeout(() => setIsHeadlineDone(true), 500);
+                return () => clearTimeout(timeout);
+            }
+        }
+
+        // Stage 2: Cycle Sub Words
+        const handleTyping = () => {
+            const i = loopNum % words.length;
+            const fullText = words[i];
+
+            setSubText(isDeleting
+                ? fullText.substring(0, subText.length - 1)
+                : fullText.substring(0, subText.length + 1)
+            );
+
+            setTypingSpeed(isDeleting ? 50 : 150);
+
+            if (!isDeleting && subText === fullText) {
+                setTimeout(() => setIsDeleting(true), 2000);
+            } else if (isDeleting && subText === "") {
+                setIsDeleting(false);
+                setLoopNum(loopNum + 1);
+            }
+        };
+
+        const timer = setTimeout(handleTyping, typingSpeed);
+        return () => clearTimeout(timer);
+    }, [isVisible, headlineText, isHeadlineDone, subText, isDeleting, loopNum, typingSpeed]);
+
     return (
         <section id="the-architect" className="relative py-32 md:py-48 px-6 md:px-20 bg-white text-stone-900 z-20 overflow-hidden">
             <div className="absolute inset-0 opacity-30 animate-ken-burns">
@@ -16,7 +69,15 @@ const Intro = () => {
                     The Philosophy
                 </p>
                 <h2 className={`font-serif text-5xl md:text-7xl text-stone-900 mb-6 transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                    The Art of <br /><span className="italic">Refinement.</span>
+                    <span className="inline-flex items-center">
+                        {headlineText}
+                        {!isHeadlineDone && <span className="ml-1 w-[2px] h-[0.8em] bg-stone-900 animate-pulse"></span>}
+                    </span>
+                    <br />
+                    <span className="italic inline-flex items-center mt-2 min-h-[1em]">
+                        {subText}
+                        {isHeadlineDone && <span className="ml-1 w-[2px] h-[0.8em] bg-stone-900 animate-pulse"></span>}
+                    </span>
                 </h2>
                 <p className={`text-stone-600 max-w-2xl mx-auto leading-relaxed mb-12 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                     True elegance is found in the details. We combine medical expertise with an artistic eye to enhance your natural features, creating results that are sophisticated and undetectable.
