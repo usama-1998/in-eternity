@@ -11,6 +11,9 @@ const Hero = ({ onBook }: HeroProps) => {
     const [showVideo, setShowVideo] = useState(false);
 
     // Typing Effect State
+    const [headlineText, setHeadlineText] = useState("");
+    const [isHeadlineDone, setIsHeadlineDone] = useState(false);
+
     const [currentText, setCurrentText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
     const [loopNum, setLoopNum] = useState(0);
@@ -19,6 +22,21 @@ const Hero = ({ onBook }: HeroProps) => {
     const words = ["Redefined", "Elevated", "Reimagined"];
 
     useEffect(() => {
+        // Stage 1: Type 'Beauty'
+        if (!isHeadlineDone) {
+            const target = "Beauty";
+            if (headlineText.length < target.length) {
+                const timeout = setTimeout(() => {
+                    setHeadlineText(target.substring(0, headlineText.length + 1));
+                }, 150);
+                return () => clearTimeout(timeout);
+            } else {
+                const timeout = setTimeout(() => setIsHeadlineDone(true), 500);
+                return () => clearTimeout(timeout);
+            }
+        }
+
+        // Stage 2: Cycle Subtitle words
         const handleTyping = () => {
             const i = loopNum % words.length;
             const fullText = words[i];
@@ -40,7 +58,7 @@ const Hero = ({ onBook }: HeroProps) => {
 
         const timer = setTimeout(handleTyping, typingSpeed);
         return () => clearTimeout(timer);
-    }, [currentText, isDeleting, loopNum, typingSpeed]);
+    }, [headlineText, isHeadlineDone, currentText, isDeleting, loopNum, typingSpeed]);
 
     return (
         <header className="relative w-full h-screen bg-black overflow-hidden z-20">
