@@ -58,11 +58,14 @@ const Hero = ({ onBook }: HeroProps) => {
                     <button onClick={() => setShowVideo(false)} className="absolute top-8 right-8 text-white hover:text-[#d4c5b0] transition-colors z-50">
                         <X size={40} strokeWidth={1} />
                     </button>
-                    <div className="w-full h-full max-w-7xl max-h-[80vh] aspect-video bg-black flex items-center justify-center">
-                        <div className="relative w-full h-full overflow-hidden group">
-                            <img src="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?q=80&w=2670&auto=format&fit=crop" alt="Brand Film" className="w-full h-full object-cover opacity-80" />
-                            <div className="absolute inset-0 flex items-center justify-center"><Play size={80} className="text-white opacity-50" /></div>
-                        </div>
+                    <div className="w-full h-full max-w-7xl aspect-video bg-black flex items-center justify-center">
+                        <iframe
+                            className="w-full h-full"
+                            src="https://www.youtube.com/embed/TlLmve5I67o?autoplay=1"
+                            title="Nature"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        ></iframe>
                     </div>
                 </div>
             )}
