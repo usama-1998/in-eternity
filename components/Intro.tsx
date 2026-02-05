@@ -12,10 +12,19 @@ const Intro = () => {
             <div className="absolute inset-0 bg-white/80"></div>
 
             <div className="relative z-10 max-w-5xl mx-auto text-center" ref={ref}>
-                <p className={`text-sm tracking-[0.3em] text-stone-500 uppercase mb-8 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+                <p className={`text-sm tracking-[0.3em] text-stone-500 uppercase mb-4 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
                     The Philosophy
                 </p>
-                <p className={`font-serif text-4xl md:text-6xl leading-tight text-stone-800 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <h2 className={`font-serif text-5xl md:text-7xl text-stone-900 mb-6 transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                    Timeless Beauty, <br /><span className="italic">Redefined.</span>
+                </h2>
+                <p className={`text-stone-600 max-w-2xl mx-auto leading-relaxed mb-12 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                    We believe that true aesthetic refinement lies in the balance between science and art. Our approach focuses on enhancing your natural architecture, creating results that are sophisticated, undetectable, and enduring.
+                </p>
+
+                <div className={`w-24 h-[1px] bg-stone-300 mx-auto mb-12 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'}`}></div>
+
+                <p className={`font-serif text-2xl md:text-3xl leading-tight text-stone-800 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                     "We adopt the precision of a surgeon and the eye of a sculptor."
                 </p>
                 <div className={`mt-16 flex justify-center items-center gap-8 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>

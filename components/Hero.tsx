@@ -44,7 +44,7 @@ const Hero = ({ onBook }: HeroProps) => {
                             </button>
                             <button
                                 onClick={onBook}
-                                className="bg-white text-stone-900 px-8 py-4 uppercase text-xs tracking-widest hover:bg-[#d4c5b0] hover:text-white transition-colors"
+                                className="bg-white text-stone-900 px-8 py-4 uppercase text-xs tracking-widest hover:bg-[#d4c5b0] hover:text-white transition-colors cursor-pointer"
                             >
                                 Book Consultation
                             </button>

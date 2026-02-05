@@ -34,8 +34,8 @@ const CinematicStackingSection = ({ data, onOpenDrawer, onSelectService, index =
     return (
         <div ref={ref as any} className="relative min-h-screen flex items-center justify-center py-24 overflow-hidden bg-[#fffbf2]">
             {/* Decorative Background Number */}
-            <div className={`absolute top-1/2 -translate-y-1/2 ${isEven ? 'right-0 translate-x-1/3' : 'left-0 -translate-x-1/3'} select-none pointer-events-none z-0`}>
-                <span className="text-[30rem] lg:text-[40rem] font-serif text-neutral-900/5 leading-none font-thin tracking-tighter">
+            <div className={`absolute top-1/2 -translate-y-1/2 ${isEven ? 'right-0 translate-x-[10%]' : 'left-0 -translate-x-[10%]'} select-none pointer-events-none z-0`}>
+                <span className="text-[30rem] lg:text-[40rem] font-serif text-neutral-900/5 leading-[0.8] font-thin tracking-tighter block">
                     {data.id}
                 </span>
             </div>
@@ -117,7 +117,7 @@ const CinematicStackingSection = ({ data, onOpenDrawer, onSelectService, index =
 
                         <button
                             onClick={() => onOpenDrawer(data)}
-                            className="w-fit flex items-center gap-4 text-neutral-900 uppercase tracking-[0.2em] text-xs font-bold group hover:text-neutral-600 transition-colors"
+                            className="w-fit flex items-center gap-4 text-neutral-900 uppercase tracking-[0.2em] text-xs font-bold group hover:text-neutral-600 transition-colors cursor-pointer"
                         >
                             <span className="border-b border-neutral-900 pb-1 group-hover:border-neutral-600 transition-colors">View All Services</span>
                             <ArrowRight className="group-hover:translate-x-2 transition-transform duration-300" size={14} />
