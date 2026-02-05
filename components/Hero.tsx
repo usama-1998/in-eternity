@@ -16,7 +16,7 @@ const Hero = ({ onBook }: HeroProps) => {
     const [loopNum, setLoopNum] = useState(0);
     const [typingSpeed, setTypingSpeed] = useState(150);
 
-    const words = ["Redefined", "Elevated", "Reimagined", "Timeless"];
+    const words = ["Redefined", "Elevated", "Reimagined"];
 
     useEffect(() => {
         const handleTyping = () => {
@@ -60,8 +60,8 @@ const Hero = ({ onBook }: HeroProps) => {
                         className="text-white font-serif text-6xl md:text-8xl italic animate-text-slide opacity-0 leading-[0.9] mb-6"
                         style={{ animationDelay: '0.2s' }}
                     >
-                        Beauty <br />
-                        <span className="inline-flex items-center">
+                        Beauty
+                        <span className="flex items-center mt-4">
                             {currentText}
                             <span className="ml-1 w-[2px] h-[0.8em] bg-white animate-pulse"></span>
                         </span>
