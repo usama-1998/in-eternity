@@ -2,20 +2,28 @@
 
 "Define Your Beauty. Restore Your Architecture."
 
-A premium, cinematic web experience for IN Eternity Clinic, built with Next.js, Tailwind CSS, and Framer Motion principles (CSS animations).
+A premium, cinematic web experience for IN Eternity Clinic, built with Next.js, Tailwind CSS v4, and Framer Motion principles.
+
+## Features
+
+- **Cinematic Entrance**: Video background hero section with reveal animations.
+- **Scroll-Linked Animations**: Elements reveal and move based on viewport position.
+- **Parallax Stacking**: "The Face," "The Skin," etc., stack cinematically on scroll.
+- **Interactive Drawers**: Detailed service information slides in from the side.
+- **Responsive Design**: Fully optimized for mobile and desktop experiences.
 
 ## Tech Stack
 
-- **Next.js 14+** (App Router)
+- **Next.js 16** (App Router)
 - **TypeScript**
-- **Tailwind CSS**
+- **Tailwind CSS v4**
 - **Lucide React** (Icons)
 
 ## Project Structure
 
-- `components/`: Reusable UI components (Hero, Navbar, Cinematic Sections, etc.)
-- `lib/`: Utilities and static data.
-- `app/`: Next.js App Router pages and layouts.
+- `components/`: Reusable UI components (Hero, Navbar, CinematicStackingSection, etc.)
+- `lib/`: Utilities like `useIntersection` hook and static data.
+- `app/`: Next.js App Router pages, layouts, and global styles.
 
 ## Getting Started
 
@@ -33,4 +41,4 @@ A premium, cinematic web experience for IN Eternity Clinic, built with Next.js, 
 
 ## Deployment
 
-Push to the main branch to deploy.
+The project is configured for seamless deployment on Vercel or any Next.js-compatible hosting provider.

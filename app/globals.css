@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.ts";
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -23,7 +22,10 @@ body {
 .pulse-ring::before {
   content: '';
   position: absolute;
-  left: -50%; top: -50%; right: -50%; bottom: -50%;
+  left: -50%;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
   border: 1px solid white;
   border-radius: 50%;
   animation: pulseRing 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
@@ -42,5 +44,6 @@ body {
   position: relative;
   z-index: 10;
   background: #f9f9f9;
-  margin-bottom: 90vh; /* Matches footer height */
+  margin-bottom: 90vh;
+  /* Matches footer height */
 }
