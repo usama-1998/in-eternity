@@ -8,18 +8,21 @@ import FooterReveal from '@/components/FooterReveal';
 import Hero from '@/components/Hero';
 import Intro from '@/components/Intro';
 import Navbar from '@/components/Navbar';
+import ServiceModal from '@/components/ServiceModal';
 import StickyNav from '@/components/StickyNav';
 import { SERVICES_DATA } from '@/lib/data';
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState(null);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState(null);
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setActiveCategory(null);
         setIsBookingOpen(false);
+        setSelectedService(null);
       }
     };
     window.addEventListener('keydown', handleEsc);
@@ -29,34 +32,42 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <StickyNav />
-
-      {/* Content Pusher pushes the footer down and sits on top of it z-10 */}
-      <div className="content-pusher shadow-2xl shadow-black/50">
+      <div className="relative z-10 bg-white">
         <Hero onBook={() => setIsBookingOpen(true)} />
         <Intro />
 
-        {/* Full Screen Cinematic Stacking Sections */}
-        {SERVICES_DATA.map((data, index) => (
+        {SERVICES_DATA.map((service, index) => (
           <CinematicStackingSection
-            key={index}
-            data={data}
+            key={service.id}
+            data={service}
             index={index}
-            onOpenDrawer={setActiveCategory as any}
+            onOpenDrawer={setActiveCategory}
+            onSelectService={setSelectedService}
           />
         ))}
+
+        <FooterReveal />
       </div>
 
-      <FooterReveal />
+      <StickyNav />
+      {/* <BookingCalendar /> - Temporarily hidden as requested */}
 
+      {/* Drawers & Modals */}
       <DetailDrawer
         isOpen={!!activeCategory}
         onClose={() => setActiveCategory(null)}
         category={activeCategory}
         onBook={() => {
-          setActiveCategory(null); // Close detail drawer when booking opens (optional, but cleaner)
+          setActiveCategory(null);
           setIsBookingOpen(true);
         }}
+      />
+
+      <ServiceModal
+        isOpen={!!selectedService}
+        onClose={() => setSelectedService(null)}
+        service={selectedService}
+        onBook={() => setIsBookingOpen(true)}
       />
 
       <BookingModal

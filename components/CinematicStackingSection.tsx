@@ -22,10 +22,11 @@ interface ServiceData {
 interface CinematicStackingSectionProps {
     data: ServiceData;
     onOpenDrawer: (data: ServiceData) => void;
+    onSelectService?: (item: ServiceItem) => void;
     index?: number;
 }
 
-const CinematicStackingSection = ({ data, onOpenDrawer, index = 0 }: CinematicStackingSectionProps) => {
+const CinematicStackingSection = ({ data, onOpenDrawer, onSelectService, index = 0 }: CinematicStackingSectionProps) => {
     const [ref, isVisible] = useIntersection(0.2);
     const [hoveredItem, setHoveredItem] = useState<number | null>(null);
     const isEven = index % 2 === 0;
@@ -100,7 +101,8 @@ const CinematicStackingSection = ({ data, onOpenDrawer, index = 0 }: CinematicSt
                                     key={idx}
                                     onMouseEnter={() => setHoveredItem(idx)}
                                     onMouseLeave={() => setHoveredItem(null)}
-                                    className="border-b border-neutral-200 py-5 group/item cursor-default transition-all duration-300 hover:bg-neutral-100/50 px-4 -mx-4"
+                                    onClick={() => onSelectService && onSelectService(item)}
+                                    className="border-b border-neutral-200 py-5 group/item cursor-pointer transition-all duration-300 hover:bg-neutral-100/50 px-4 -mx-4"
                                 >
                                     <div className="flex justify-between items-center">
                                         <span className="text-xl text-neutral-800 font-light group-hover/item:text-black transition-colors">{item.name}</span>
