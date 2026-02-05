@@ -33,7 +33,7 @@ const CinematicStackingSection = ({ data, onOpenDrawer, onSelectService, onBook,
     const isEven = index % 2 === 0;
 
     return (
-        <div ref={ref as any} className="relative min-h-screen flex items-center justify-center py-24 overflow-hidden bg-[#fffbf2]">
+        <div id={data.title.toLowerCase().replace(' ', '-')} ref={ref as any} className="relative min-h-screen flex items-center justify-center py-24 overflow-hidden bg-[#fffbf2]">
             {/* Decorative Background Number */}
             <div className={`absolute top-1/2 -translate-y-1/2 ${isEven ? 'right-0 translate-x-[10%]' : 'left-0 -translate-x-[10%]'} select-none pointer-events-none z-0`}>
                 <span className="text-[30rem] lg:text-[40rem] font-serif text-neutral-900/5 leading-[0.8] font-thin tracking-tighter block">

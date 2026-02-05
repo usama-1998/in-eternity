@@ -5,6 +5,7 @@ A premium aesthetic medicine website featuring a cinematic, "light & elegant" de
 ## Recent Updates
 
 -   **Book Consultation Buttons**: Added "Book Consultation" buttons to all sections (Hero, Intro, Face, Skin, Body, Lab, and Footer) for seamless booking access throughout the page.
+-   **Menu Navigation**: Clicking menu items now smoothly scrolls to the corresponding section (The Architect, The Face, The Skin, The Body, The Lab, Contact).
 -   **Cinematic Service Sections**: Completely redesigned the "Face", "Skin", "Body", and "Lab" sections with a high-end editorial look.
 -   **Arched Window Design**: Images are now framed in tall, elegant arches (`rounded-t-[500px]`) with subtle parallax effects.
 -   **New Imagery**:

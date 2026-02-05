@@ -7,7 +7,7 @@ const FooterReveal = ({ onBook }: FooterRevealProps) => {
         <>
             <div className="h-[80vh] w-full pointer-events-none bg-transparent"></div>
 
-            <div className="footer-reveal h-[80vh] bg-[#0a0a0a] flex items-center justify-center text-white">
+            <div id="contact" className="footer-reveal h-[80vh] bg-[#0a0a0a] flex items-center justify-center text-white">
                 <div className="w-full h-full relative">
                     <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1518005052357-e984701812a0?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center"></div>
 
