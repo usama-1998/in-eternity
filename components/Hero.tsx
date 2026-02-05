@@ -11,7 +11,7 @@ const Hero = () => {
             <div className="absolute inset-0">
                 <video
                     src="/hero-new.mp4"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover scale-[0.9]"
                     autoPlay
                     muted
                     playsInline
