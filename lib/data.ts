@@ -142,7 +142,7 @@ export const SERVICES_DATA = [
                 downtime: "1-3 days bumps"
             },
             {
-                name: "PicoSure",
+                name: "Fotona Pico PQX",
                 detail: "Pigment Removal",
                 description: "The gold standard for clearing spots and pigmentation.",
                 fullDescription: "The world's first picosecond laser. It delivers energy in trillionths of a second to shatter pigment into dust-like particles that the body eliminates easily. Highly effective for sun spots, melasma, and tattoo removal.",
