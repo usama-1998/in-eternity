@@ -115,18 +115,17 @@ const Hero = ({ onBook }: HeroProps) => {
 
             {showVideo && (
                 <div className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-md flex items-center justify-center animate-in fade-in duration-500 p-8">
-                    <div className="relative w-full max-w-4xl aspect-video bg-black flex items-center justify-center shadow-2xl border border-white/10">
+                    <div className="relative w-full max-w-[400px] aspect-[9/16] bg-black flex items-center justify-center shadow-2xl border border-white/10 group">
                         <button
                             onClick={() => setShowVideo(false)}
-                            className="absolute -top-12 left-0 text-white hover:text-[#d4c5b0] transition-colors z-[60] cursor-pointer flex items-center gap-2 group"
+                            className="absolute top-4 right-4 text-white hover:text-[#d4c5b0] bg-black/50 hover:bg-black/80 p-2 rounded-full transition-all z-[100] cursor-pointer flex items-center justify-center"
                         >
-                            <X size={24} strokeWidth={1} />
-                            <span className="text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Close</span>
+                            <X size={20} strokeWidth={2} />
                         </button>
                         <iframe
                             className="w-full h-full"
-                            src="https://www.youtube.com/embed/TlLmve5I67o?autoplay=1"
-                            title="Nature"
+                            src="https://www.youtube.com/embed/FMdk5ygS2g8?autoplay=1&modestbranding=1&rel=0&controls=0&showinfo=0"
+                            title="Our Story"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                         ></iframe>
